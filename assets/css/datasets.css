@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tenor+Sans&family=Urbanist:wght@200;300;400;500;600;700;800&display=swap");
+
+.table-container {
+    margin-top: 30px;
+}
+
+.table-container h2 {
+    text-align: center;
+    padding: 30px;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.table-container table {
+    width: 1200px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table-container th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: #87CEEB;
+    text-align: left;
+}
+
+.table-container tbody tr:nth-of-type(even) {
+    background-color: #E0FFFF;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    margin-top: 8px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding-left: 15px;
+    padding-right: 13px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #030037;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 40px;
+}
+
+.pagination button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.download-container {
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.download-container h3 {
+    margin-right: 30px;
+    margin-top: 3px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.download-container a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #030037;
+}
+
+.tablecontainer{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.tablecontainer h2{
+    text-align: center;
+    padding: 30px;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.tablecontainer table {
+    width: 1200px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tablecontainer th {
+    width: 200px;
+}
+
+.tablecontainer th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+.tablecontainer th {
+    background-color: #87CEEB;
+    text-align: left;
+}
+
+.tablecontainer tbody tr:nth-of-type(even) {
+    background-color: #E0FFFF;
+}
