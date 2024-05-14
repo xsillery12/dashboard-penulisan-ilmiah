@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost/dashboard-penulisan-ilmiah/assets/json/kepadatan.json";
+var url = "./assets/json/kepadatan.json";
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 xmlhttp.onreadystatechange = function () {
