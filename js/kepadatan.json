@@ -1,0 +1,40 @@
+{
+  "kepadatan": [
+    {
+      "tahun": "2015",
+      "jumlah_penduduk_jakarta": "10177924"
+    },
+    {
+      "tahun": "2016",
+      "jumlah_penduduk_jakarta": "10277628"
+    },
+    {
+      "tahun": "2017",
+      "jumlah_penduduk_jakarta": "10374235"
+    },
+    {
+      "tahun": "2018",
+      "jumlah_penduduk_jakarta": "10467629"
+    },
+    {
+      "tahun": "2019",
+      "jumlah_penduduk_jakarta": "10557810"
+    },
+    {
+      "tahun": "2020",
+      "jumlah_penduduk_jakarta": "10562088"
+    },
+    {
+      "tahun": "2021",
+      "jumlah_penduduk_jakarta": "10605437"
+    },
+    {
+      "tahun": "2022",
+      "jumlah_penduduk_jakarta": "10640007"
+    },
+    {
+      "tahun": "2023",
+      "jumlah_penduduk_jakarta": "10672100"
+    }
+  ]
+}

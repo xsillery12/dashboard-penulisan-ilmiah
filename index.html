@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tenor+Sans&family=Urbanist:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav id="navbar" class="nav-transparent">
+      <div class="container">
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#comparasion">Comparasion</a></li>
+          <li><a href="#find">Find Me</a></li>
+          <li><a href="#comparasion">Datasets</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Hi!</h1>
+        <h2>Welcome to,</h2>
+        <h2>Population Density of DKI Jakarta Visualization</h2>
+        <button id="exploreBtn">Explore Now!</button>
+      </div>
+    </div>
+
+    <iframe
+      width="1510"
+      height="1500"
+      src="https://lookerstudio.google.com/embed/reporting/6ee5f189-1371-40dc-a0f8-accd98aac362/page/p_hk5boqz0gd"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen
+      sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+    ></iframe>
+
+    <section class="datasets-section" id="comparasion">
+      <div class="container">
+        <h2>COMPARISON</h2>
+      </div>
+    </section>
+
+    <div class="chart-container">
+      <h1>Kepadatan Penduduk DKI Jakarta pada Tahun 2015-2023</h1>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <ul class="accordion">
+      <li>
+        <input type="radio" name="accordion" id="first" />
+        <label for="first">
+          <i class="fa-solid fa-angle-down"></i>
+          Explaination
+        </label>
+        <div class="content">
+          <p>
+            Secara keseluruhan, data ini menunjukkan tren peningkatan jumlah
+            penduduk di Jakarta dari tahun 2015 hingga 2023. Meskipun laju
+            peningkatan penduduk setiap tahunnya bervariasi, ada kecenderungan
+            bahwa pertumbuhan penduduk cenderung melambat dari tahun 2020 hingga
+            2023.
+          </p>
+          <p>
+            Faktor-faktor yang mungkin mempengaruhi pertumbuhan ini bisa
+            meliputi kebijakan pemerintah, kondisi ekonomi, migrasi, serta
+            peristiwa besar seperti pandemi. Misalnya, penurunan drastis pada
+            peningkatan jumlah penduduk di tahun 2020 mungkin berkaitan dengan
+            dampak dari pandemi COVID-19.
+          </p>
+          <p>
+            Rata-rata persentase kenaikan jumlah penduduk Jakarta per tahun dari
+            2015 hingga 2023 adalah sekitar 0.60% per tahun. Kenaikan ini
+            menunjukkan tren pertumbuhan yang relatif stabil, meskipun ada
+            penurunan signifikan dalam persentase kenaikan pada tahun 2020 yang
+            mungkin disebabkan oleh dampak pandemi COVID-19.
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <section class="datasets-section">
+      <div class="container">
+        <h2>FIND ME!</h2>
+      </div>
+    </section>
+
+    <div class="sosmed" id="find">
+      <a href="https://www.linkedin.com/in/muhammaddaffafachreza/"
+        ><img src="img/icons8-linkedin.svg" alt=""
+      /></a>
+      <a href="https://www.instagram.com/mhmd.daffa_/"
+        ><img src="img/icons8-instagram.svg" alt=""
+      /></a>
+      <a href="https://github.com/xsillery12"
+        ><img src="img/icons8-github.svg" alt=""
+      /></a>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa-solid fa-angle-up" style="color: #ffffff"></i>
+    </button>
+
+    <footer>
+      <div class="footer-container">
+        <h3>© 2024 Muhammad Daffa Fachreza. All rights reserved</h3>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const labels = document.querySelectorAll(".accordion label");
+
+        labels.forEach((label) => {
+          label.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+            const isOpen =
+              content.style.maxHeight && content.style.maxHeight !== "0px";
+
+            // Close all other accordions and reset icons
+            document.querySelectorAll(".accordion .content").forEach((c) => {
+              c.style.maxHeight = null;
+              c.style.padding = "0 10px";
+            });
+            document.querySelectorAll(".accordion label i").forEach((i) => {
+              i.className = "fa-solid fa-angle-down";
+            });
+
+            // Toggle current accordion
+            if (isOpen) {
+              content.style.maxHeight = null;
+              content.style.padding = "0 10px";
+              icon.className = "fa-solid fa-angle-down";
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              content.style.padding = "10px";
+              icon.className = "fa-solid fa-angle-up";
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.getElementById("navbar");
+        var scrollPosition = window.scrollY;
+
+        // Jika posisi scroll > 0, ubah warna navbar
+        if (scrollPosition > 0) {
+          navbar.classList.add("nav-colored");
+        } else {
+          // Jika posisi scroll == 0, kembalikan ke tampilan transparan
+          navbar.classList.remove("nav-colored");
+        }
+      });
+    </script>
+
+    <script>
+      document
+        .getElementById("exploreBtn")
+        .addEventListener("click", function () {
+          window.location.href = "#summary";
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./js/chart.js"></script>
+  </body>
+</html>

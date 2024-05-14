@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tenor+Sans&family=Urbanist:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.nav-transparent {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+  transition: background-color 0.5s ease;
+  z-index: 1000;
+}
+
+.nav-colored {
+  background-color: #030037;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 50px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000; /* Warna teks default */
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Jarak garis dari teks */
+  width: 100%;
+  height: 2px; /* Ketebalan garis */
+  background-color: #fff; /* Warna garis */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+.hero-image {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero2.jpg'); /* ganti 'img/hero.png' sesuai dengan jalur file gambar Anda */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* menyesuaikan tinggi hero sesuai kebutuhan */
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  margin-left: 100px;
+  color: white;
+}
+
+.hero-text h1, .hero-text h2, .hero-text button {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.hero-text button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #030037;
+  border-radius: 15px;
+  border: 2px solid #030037;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}
+
+.hero-text button a {
+  text-decoration: none;
+}
+
+iframe {
+  max-width: 100%;
+  width: 100%;
+  height: 180;
+}
+
+.datasets-section {
+  background-color: #ffa500;
+  text-align: center;
+}
+
+.datasets-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  height: 80px;
+}
+
+.datasets-section h2 {
+  color: black;
+  font-size: 45px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.chart-container {
+  width: 70%; /* Atur lebar container sesuai kebutuhan */
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding-top: 50px;
+}
+
+#myChart {
+  padding-top: 15px;
+  padding-bottom: 50px;
+  width: 50%; /* Atur lebar chart sesuai kebutuhan */
+  height: 100px; /* Atur tinggi chart sesuai kebutuhan */
+}
+
+.accordion {
+  list-style: none;
+  padding: 40px;
+  margin: auto;
+  width: 1200px;
+}
+
+.accordion li {
+  margin-bottom: 10px;
+}
+
+.accordion label {
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 15px;
+  background: #FFD280;
+  border: 1px solid #ccc;
+  border-radius: 6px 6px 0 0;
+}
+
+.accordion input[type="radio"] {
+  display: none;
+}
+
+.accordion .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #FFF0D4;
+  border: 1px solid #ccc;
+  border-radius: 0 0 6px 6px;
+  border-top: none;
+  padding: 0 20px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.accordion .content p {
+  margin: 10px;
+  text-align: justify;
+}
+
+.sosmed {
+  text-align: center;
+  display: block;
+}
+
+.sosmed a {
+  margin: 0 55px;
+}
+
+.sosmed img {
+  padding: 55px;
+  width: 90px;
+  height: 90px;
+  color: #030037;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #030037;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #ffa500;
+}
+
+footer {
+  background-color: #030037;
+  text-align: center;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  height: 30px;
+}
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding-top: 5px;
+}
