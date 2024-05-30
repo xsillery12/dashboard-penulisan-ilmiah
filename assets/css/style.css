@@ -223,6 +223,7 @@ h1 {
 .accordion .content p {
   margin: 10px;
   text-align: justify;
+  text-indent: 30px;
 }
 
 .sosmed {
